@@ -21,4 +21,12 @@ public class ProgramaEducativo {
         tipoProblema = scanner.nextInt();
     }
 
+            public int[] obtenerOperandos() {
+        int max = (int) Math.pow(10, nivelDificultad) - 1;
+        int min = (int) Math.pow(10, nivelDificultad - 1);
+        int num1 = random.nextInt((max - min) + 1) + min;
+        int num2 = random.nextInt((max - min) + 1) + min;
+        return new int[]{num1, num2};
+    }
+
 }
