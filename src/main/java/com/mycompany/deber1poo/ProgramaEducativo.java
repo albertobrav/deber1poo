@@ -55,6 +55,15 @@ public class ProgramaEducativo {
                 programa.mostrarMensajeNegativo();
             }
         }
+        double porcentajeAciertos = ((double) programa.aciertos / programa.intentos) * 100;
+
+        if (porcentajeAciertos < 75) {
+            System.out.println("Por favor pide ayuda adicional a tu instructor.");
+        } else {
+            System.out.println("Felicidades, estás listo para pasar al siguiente nivel!");
+        }
+
+        scanner.close();
 
     }
 
