@@ -42,6 +42,20 @@ public class ProgramaEducativo {
         Scanner scanner = new Scanner(System.in);
 
         programa.iniciarConfiguracion();
+                while (programa.intentos < 10) {
+            int[] operandos = programa.obtenerOperandos();
+            System.out.printf("¿Cuánto es %d + %d? ", operandos[0], operandos[1]);
+            int respuesta = scanner.nextInt();
+            programa.intentos++;
+
+            if (respuesta == operandos[0] + operandos[1]) {
+                programa.aciertos++;
+                programa.mostrarMensajePositivo();
+            } else {
+                programa.mostrarMensajeNegativo();
+            }
+        }
+
     }
 
 }
