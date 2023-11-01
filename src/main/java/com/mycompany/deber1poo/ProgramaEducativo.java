@@ -37,5 +37,11 @@ public class ProgramaEducativo {
         String[] mensajes = {"No. Por favor intenta de nuevo.", "Incorrecto. Intenta una vez más.", "¡No te rindas!", "No. Sigue intentando."};
         System.out.println(mensajes[random.nextInt(mensajes.length)]);
     }
+    public static void main(String[] args) {
+        ProgramaEducativo programa = new ProgramaEducativo();
+        Scanner scanner = new Scanner(System.in);
+
+        programa.iniciarConfiguracion();
+    }
 
 }
